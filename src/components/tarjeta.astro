@@ -1,0 +1,67 @@
+---
+// Props para la tarjeta
+const { nombre = "Hamburguesa Clásica", descripcion = "Deliciosa hamburguesa con carne 100% de res, queso cheddar, lechuga y tomate.", precio = "$120", imagen = "/images/hamburguesa.jpg" } = Astro.props;
+---
+
+<article class="tarjeta-producto">
+    <img src={imagen} alt={nombre} class="tarjeta-img" />
+    <div class="tarjeta-contenido">
+        <h2 class="tarjeta-nombre">{nombre}</h2>
+        <p class="tarjeta-descripcion">{descripcion}</p>
+        <span class="tarjeta-precio">{precio}</span>
+        <button class="tarjeta-boton">Agregar al carrito</button>
+    </div>
+</article>
+
+<style>
+.tarjeta-producto {
+    width: 320px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+    transition: transform 0.15s;
+}
+.tarjeta-producto:hover {
+    transform: translateY(-4px) scale(1.03);
+}
+.tarjeta-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.tarjeta-contenido {
+    padding: 1.2rem;
+}
+.tarjeta-nombre {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.tarjeta-descripcion {
+    margin: 0 0 1rem 0;
+    color: #555;
+    font-size: 1rem;
+}
+.tarjeta-precio {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #e67e22;
+    margin-bottom: 1rem;
+}
+.tarjeta-boton {
+    background: #e67e22;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+.tarjeta-boton:hover {
+    background: #cf711f;
+}
+</style>
