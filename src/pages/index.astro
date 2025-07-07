@@ -1,8 +1,8 @@
 ---
-import icon from 'astro-icon'; 
+
 import Tarjeta from '../components/tarjeta.astro';
 import Layout from '../layouts/Layout.astro';
-
+import { Icon } from 'astro-icon/components';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -27,3 +27,23 @@ import Layout from '../layouts/Layout.astro';
         
     </section>
 </Layout>
+
+<style>
+    :root {
+    --dark-bg: #1a1a1a;
+    --dark-card-bg: #222222;
+    --yellow-accent: #FFDD00; /* A common yellow for accents */
+    --text-color: #ffffff;
+    --light-gray-text: #cccccc;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('/src/assets/imagenes/fondo.png') ;
+    background-size: cover;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+</style>

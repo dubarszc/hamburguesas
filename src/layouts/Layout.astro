@@ -1,3 +1,7 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -8,33 +12,31 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
-			 <header>
-       <div class="header">
+			 <header class="header">
 
            <!-- logo -->
-           <div class="container-hero">
-            <div class="container hero">
+            <div class="container-hero">
                 <div class="container-logo">
-                    <h1 class="logo"><a href="index.html"><img src="/src/assets/imagenes/img-3.png" alt="" ></a></h1>
+                    <h1 class="logo"><a href="index.html"><img src="/src/assets/imagenes/img-3.png" alt=""></a></h1>
                 </div>
                 
               
                 
                 <!-- navbar -->
-                <nav class="normal">
+                <nav class="navbar">
                         <div class="menu">
                             
                         <ul class="ul_links">                                            
                             <li class="li_links">
-                            <a href="#section-products" class="link">Delivey</a>
+                            <a href="#delivery" class="link">Delivey</a>
                         </li >
                         
                         <li class="li_links">
-                            <a href="#" class="link">Ubicacion</a>
+                            <a href="#horarios" class="link">Horarios</a>
                         </li>
                         
                         <li class="li_links">
-                            <a href="#pedido-tortas" class="link">Horarios</a>
+                            <a href="#ubicacion" class="link">Ubicacion</a>
                         </li>
                     </ul>
                 </div>
@@ -43,29 +45,78 @@
             
         
             <!-- carrito -->
-            <section class="carro">                                                       
-                <div class="cart-icon">
-                    <img src="/src/assets/imagenes/cart-icon.svg" alt="Carrito de compras" width="24" height="24" />
-                    <span id="cart-count">0</span>
-                </div>
-                </section>
+                <div class="cart-and-phone">                                                       
+                    <div class="cart-icon">
+                        <Icon name="mdi:cart" />
+                    </div>
+                        <div class="numero-telefono">
+                            <p>+58 424-3333333</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-                
-                
-                
-                
-            </div> 
             </header>
 		<slot />
 	</body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+	a{
+        text-decoration: none;
+        color: var(--text--color);
+         padding: 0;
+        margin: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        padding: 0 50px;
+        background-image: url('/src/assets/imagenes/fondo.png') ;
+        background-size: cover;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        
+    }
+
+    .container-hero {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container-logo img {
+        height: 64px;
+        border-radius: 50%;
+    }
+
+    .navbar ul {
+        display: flex;
+        gap: 70px;
+    }
+
+    .navbar a {
+        font-weight: 100;
+        transition: color 0.3 ease;
+    }
+
+    .navbar a:hover {
+        color: var(--yellow-accent);
+    }
+
+    .cart-and-phone {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-weight: 100;
+    }
+
+    .cart-icon {
+        font-size: 1.5em;
+    }
 </style>
