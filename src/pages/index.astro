@@ -1,4 +1,5 @@
 ---
+import icon from 'astro-icon'; 
 import Tarjeta from '../components/tarjeta.astro';
 import Layout from '../layouts/Layout.astro';
 
@@ -9,19 +10,20 @@ import Layout from '../layouts/Layout.astro';
 <Layout>
     <section class="hero">
         <div class="container">
-        <h1>Bienvenido a nuestra tienda de hamburguesas</h1>
-        <p>Las mejores hamburguesas de la ciudad, hechas con amor y los ingredientes más frescos.</p>
+            <h1>Bienvenido a nuestra tienda de hamburguesas</h1>
+            <p>Las mejores hamburguesas de la ciudad, hechas con amor y los ingredientes más frescos.</p>
         </div>
     </section>
     
     <section id="section-products" class="productos">
         <div class="container">
-        <h2>Nuestras Hamburguesas</h2>
-        <div class="tarjetas">
-            <Tarjeta nombre="Hamburguesa Clásica" descripcion="Deliciosa hamburguesa con carne 100% de res, queso cheddar, lechuga y tomate." precio="$120" imagen="/imagenes/img-3.png" />
-            <Tarjeta nombre="Hamburguesa BBQ" descripcion="Jugosa hamburguesa con salsa BBQ, cebolla caramelizada y tocino crujiente." precio="$150" imagen="/images/hamburguesa-bbq.jpg" />
-            <Tarjeta nombre="Hamburguesa Veggie" descripcion="Hamburguesa vegetariana con garbanzos, espinacas y salsa de yogur." precio="$130" imagen="/images/hamburguesa-veggie.jpg" />
+            <h2>Nuestras Hamburguesas</h2>
+            <div class="tarjetas">
+                <Tarjeta nombre="Hamburguesa Clásica" descripcion="Deliciosa hamburguesa con carne 100% de res, queso cheddar, lechuga y tomate." precio="$120" imagen="/imagenes/img-3.png" />
+                <Tarjeta nombre="Hamburguesa BBQ" descripcion="Jugosa hamburguesa con salsa BBQ, cebolla caramelizada y tocino crujiente." precio="$150" imagen="/images/hamburguesa-bbq.jpg" />
+                <Tarjeta nombre="Hamburguesa Veggie" descripcion="Hamburguesa vegetariana con garbanzos, espinacas y salsa de yogur." precio="$130" imagen="/images/hamburguesa-veggie.jpg" />
+            </div>
         </div>
-        </div>
+        
     </section>
 </Layout>
